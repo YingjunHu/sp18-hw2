@@ -19,6 +19,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.CountDownLatch;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.lang.System;
 
 public class GlobeSortClient {
 
@@ -45,8 +46,15 @@ public class GlobeSortClient {
 
         System.out.println("Requesting server to sort array");
         IntArray request = IntArray.newBuilder().addAllValues(Arrays.asList(values)).build();
+
+        long start_time = System.currentTimeMillis();
+
         IntArray response = serverStub.sortIntegers(request);
+
+        long end_time = System.currentTimeMillis();
         System.out.println("Sorted array");
+        System.out.println("Total time used to sort " + values.length + " integers is: " +
+        ((end_time - start_time) / 1000));
     }
 
     public void shutdown() throws InterruptedException {
