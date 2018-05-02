@@ -54,7 +54,7 @@ public class GlobeSortClient {
         long end_time = System.currentTimeMillis();
         System.out.println("Sorted array");
         System.out.println("Total time used to sort " + values.length + " integers is: " +
-        ((end_time - start_time) / 1000));
+        ((double)(end_time - start_time) / 1000) + " seconds");
     }
 
     public void shutdown() throws InterruptedException {
