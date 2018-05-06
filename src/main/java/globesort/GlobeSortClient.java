@@ -55,6 +55,8 @@ public class GlobeSortClient {
         for(Integer i : vs){
             System.out.println(i);
         }
+        Integer time = response.getTime();
+        System.out.println("time " + time);
 
 
         long end_time = System.currentTimeMillis();

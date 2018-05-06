@@ -92,6 +92,7 @@ public class GlobeSortServer {
             for(Integer val : values) {
                 responseBuilder.addValues(val);
             }
+            responseBuilder.setTime(10);
             IntArray response = responseBuilder.build();
             responseObserver.onNext(response);
             responseObserver.onCompleted();
