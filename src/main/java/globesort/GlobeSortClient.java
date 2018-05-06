@@ -63,7 +63,7 @@ public class GlobeSortClient {
         System.out.println("Sorted array");
         long total_time = (end_time - start_time) / 1000;
         System.out.println("Application throughput: " + values.length + " integers is: " +
-        (total_time + " seconds");
+        total_time + " seconds");
         System.out.println("network throughput: " + (total_time - sort_time));
     }
 
