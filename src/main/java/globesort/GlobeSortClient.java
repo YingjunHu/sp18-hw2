@@ -46,7 +46,7 @@ public class GlobeSortClient {
         long end_time = System.currentTimeMillis();
         System.out.println("Ping successful.");
 
-        System.out.println("Latency: " + (double)(end_time-start_time) / 1000 + "seconds.");
+        System.out.println("Latency: " + (double)(end_time-start_time) / 1000/2 + "seconds.");
 
         System.out.println("Requesting server to sort array");
         IntArray request = IntArray.newBuilder().addAllValues(Arrays.asList(values)).build();
