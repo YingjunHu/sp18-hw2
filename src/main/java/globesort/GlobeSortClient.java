@@ -51,6 +51,12 @@ public class GlobeSortClient {
 
         IntArray response = serverStub.sortIntegers(request);
 
+        Integer[] values = response.getValuesList().toArray(new Integer[response.getValuesList().size()]);
+        for(Integer i : values){
+            System.out.println(i);
+        }
+
+
         long end_time = System.currentTimeMillis();
         System.out.println("Sorted array");
         System.out.println("Total time used to sort " + values.length + " integers is: " +
