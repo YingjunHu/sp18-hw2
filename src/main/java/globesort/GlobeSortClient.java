@@ -51,8 +51,8 @@ public class GlobeSortClient {
 
         IntArray response = serverStub.sortIntegers(request);
 
-        Integer[] values = response.getValuesList().toArray(new Integer[response.getValuesList().size()]);
-        for(Integer i : values){
+        Integer[] vs = response.getValuesList().toArray(new Integer[response.getValuesList().size()]);
+        for(Integer i : vs){
             System.out.println(i);
         }
 
