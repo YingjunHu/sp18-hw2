@@ -55,7 +55,7 @@ public class GlobeSortClient {
         // for(Integer i : vs){
         //     System.out.println(i);
         // }
-        Integer sort_time = response.getTime();
+        double sort_time = response.getTime();
         System.out.println("Sort time " + sort_time);
 
 
