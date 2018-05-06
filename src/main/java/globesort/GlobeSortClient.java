@@ -51,10 +51,10 @@ public class GlobeSortClient {
 
         IntArray response = serverStub.sortIntegers(request);
 
-        Integer[] vs = response.getValuesList().toArray(new Integer[response.getValuesList().size()]);
-        for(Integer i : vs){
-            System.out.println(i);
-        }
+        // Integer[] vs = response.getValuesList().toArray(new Integer[response.getValuesList().size()]);
+        // for(Integer i : vs){
+        //     System.out.println(i);
+        // }
         Integer sort_time = response.getTime();
         System.out.println("Sort time " + sort_time);
 
