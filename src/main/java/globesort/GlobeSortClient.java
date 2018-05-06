@@ -55,14 +55,16 @@ public class GlobeSortClient {
         for(Integer i : vs){
             System.out.println(i);
         }
-        Integer time = response.getTime();
-        System.out.println("time " + time);
+        Integer sort_time = response.getTime();
+        System.out.println("Sort time " + sort_time);
 
 
         long end_time = System.currentTimeMillis();
         System.out.println("Sorted array");
-        System.out.println("Total time used to sort " + values.length + " integers is: " +
-        ((double)(end_time - start_time) / 1000) + " seconds");
+        long total_time = (end_time - start_time) / 1000;
+        System.out.println("Application throughput: " + values.length + " integers is: " +
+        (total_time + " seconds");
+        System.out.println("network throughput: " + (total_time - sort_time));
     }
 
     public void shutdown() throws InterruptedException {
