@@ -67,8 +67,8 @@ public class GlobeSortClient {
         System.out.println("Sorted array");
         double total_time = (double)(end_time - start_time) / 1000;
         System.out.println("Application throughput: " + values.length + " integers is: " +
-        total_time + " seconds");
-        System.out.println("one way network throughput: " + (total_time - sort_time)/2 + " seconds.");
+        (1000000.0/total_time) + " sorted/seconds");
+        System.out.println("one way network throughput: " + 1000000.0 /(total_time - sort_time)*2 + " sorted/seconds.");
     }
 
     public void shutdown() throws InterruptedException {
